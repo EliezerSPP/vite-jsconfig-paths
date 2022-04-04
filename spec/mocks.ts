@@ -35,11 +35,11 @@ export let configs: {
   [root: string]: Config | undefined
 } = {
   '/a/': {
-    configPath: '/a/tsconfig.json',
+    configPath: '/a/jsconfig.json',
     baseUrl: '/a',
   },
   '/a/b/': {
-    configPath: '/a/b/tsconfig.json',
+    configPath: '/a/b/jsconfig.json',
     baseUrl: '/a/b',
   },
 }

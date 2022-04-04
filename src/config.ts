@@ -22,14 +22,13 @@ export function loadConfig(cwd: string): Config | undefined {
   if (configPath) {
     const config = loadTsconfig(configPath) as TSConfig
     const {
-      compilerOptions: { allowJs, checkJs, baseUrl, paths, outDir } = {},
+      compilerOptions: { baseUrl, paths, outDir } = {},
     } = config
 
     return {
       configPath: normalizePath(configPath),
       include: config.include,
       exclude: config.exclude,
-      allowJs: allowJs || checkJs,
       baseUrl: baseUrl && normalizePath(resolve(configPath, '..', baseUrl)),
       paths,
       outDir,

@@ -7,7 +7,7 @@ import { PluginOptions } from './types'
 import { loadConfig } from './config'
 
 import _debug from 'debug'
-const debug = _debug('vite-tsconfig-paths')
+const debug = _debug('vite-jsconfig-paths')
 
 type ViteResolve = (id: string, importer: string) => Promise<string | undefined>
 
@@ -100,13 +100,6 @@ export default (opts: PluginOptions = {}): Plugin => {
 
     const isIncluded = getIncluder(config)
 
-    let importerExtRE = /./
-    if (!opts.loose) {
-      importerExtRE = config.allowJs
-        ? /\.(vue|svelte|mdx|mjs|[jt]sx?)$/
-        : /\.tsx?$/
-    }
-
     const resolved = new Map<string, string>()
     return async (viteResolve, id, importer) => {
       // Skip virtual modules.
@@ -115,8 +108,6 @@ export default (opts: PluginOptions = {}): Plugin => {
       importer = normalizePath(importer)
       const importerFile = importer.replace(/[#?].+$/, '')
 
-      // Ignore importers with unsupported extensions.
-      if (!importerExtRE.test(importerFile)) return
       // Respect the include/exclude properties.
       if (!isIncluded(relative(root, importerFile))) return
 
@@ -204,7 +195,7 @@ function findProjects(viteRoot: string, opts: PluginOptions) {
   if (!projects) {
     debug(`crawling "${root}"`)
     projects = crawl(root, {
-      only: ['tsconfig.json'],
+      only: ['jsconfig.json'],
       skip: ['node_modules', '.git'],
     })
   }

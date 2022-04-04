@@ -1,4 +1,4 @@
-import tsPaths from 'vite-tsconfig-paths'
+import tsPaths from 'vite-jsconfig-paths'
 import type { PluginContext } from 'rollup'
 import type { PluginOptions } from '../src/types'
 import { resolve } from '../src/path'
