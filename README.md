@@ -28,12 +28,12 @@ Based on: (vite-tsconfig-paths)[https://github.com/aleclarson/vite-tsconfig-path
 ### Options
 
 - `root: string`  
-  The directory to crawl for `tsconfig.json` files.  
+  The directory to crawl for `jsconfig.json` files.  
   Defaults to `viteConfig.root`
 
 - `projects: string[]`  
-  An array of `tsconfig.json` paths (relative to `viteConfig.root`)
-  and/or directories that contain a `tsconfig.json` file.  
+  An array of `jsconfig.json` paths (relative to `viteConfig.root`)
+  and/or directories that contain a `jsconfig.json` file.  
   This overrides the `root` option.
 
 - `extensions: string[]`  
@@ -46,7 +46,7 @@ Based on: (vite-tsconfig-paths)[https://github.com/aleclarson/vite-tsconfig-path
 
 If the `baseUrl` is defined, it gets prepended to all bare imports, and its resolution will take precedence over node_modules. This is also how TypeScript does it.
 
-Say the `baseUrl` is `../root` and you import `react`. This plugin will use `../root/react` if it exists. If not found, then `react` is resolved normally. The `baseUrl` is relative to the project root (where `tsconfig.json` lives).
+Say the `baseUrl` is `../root` and you import `react`. This plugin will use `../root/react` if it exists. If not found, then `react` is resolved normally. The `baseUrl` is relative to the project root (where `jsconfig.json` lives).
 
 &nbsp;
 
