@@ -1,7 +1,7 @@
 # vite-jsconfig-paths
 
 [![npm](https://img.shields.io/npm/v/vite-jsconfig-paths.svg)](https://www.npmjs.com/package/vite-jsconfig-paths)
-[![TS-Standard - Typescript Standard Style Guide](https://badgen.net/badge/code%20style/ts-standard/blue?icon=typescript)](https://github.com/standard/ts-standard)
+[![Code style: Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 Give [`vite`] the ability to resolve imports using "jsconfig.json" path mapping.
 Based on: (vite-tsconfig-paths)[https://github.com/aleclarson/vite-tsconfig-paths]
