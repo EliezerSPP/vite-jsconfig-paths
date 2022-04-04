@@ -4,7 +4,8 @@
 [![Code style: Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 Give [`vite`] the ability to resolve imports using "jsconfig.json" path mapping.
-Based on: (vite-tsconfig-paths)[https://github.com/aleclarson/vite-tsconfig-paths]
+
+Based on: [vite-tsconfig-paths](https://github.com/aleclarson/vite-tsconfig-paths)
 
 [`vite`]: https://github.com/vitejs/vite
 
