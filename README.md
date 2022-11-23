@@ -1,3 +1,5 @@
+> ⚠️ This package is deprecated as of [`vite-tsconfig-paths` v3.5](https://github.com/aleclarson/vite-tsconfig-paths/releases/tag/v3.5.0). ⚠️
+
 # vite-jsconfig-paths
 
 [![npm](https://img.shields.io/npm/v/vite-jsconfig-paths.svg)](https://www.npmjs.com/package/vite-jsconfig-paths)
